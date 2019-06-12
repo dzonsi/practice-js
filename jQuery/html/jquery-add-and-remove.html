@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Add and remove elements</title>
+	<script src="../jquery-3.3.1.js"></script>
+	<script src="../scripts/add-and-remove.js"></script>
+
+</head>
+
+<body>
+	<h2>Add:</h2>
+	<button id="b5">Body append</button>
+	<button id="b6">Body prepend</button>
+	<p id="p1">This is a paragraph.</p>
+	<p>This is another paragraph.</p>
+
+	<ol id="l1">
+ 		<li>List item 1</li>
+  		<li>List item 2</li>
+  		<li>List item 3</li>
+	</ol>
+
+	<button id="b1">Append text</button>
+	<button id="b2">Append list items</button>
+	<br><br>
+	<button id="b3">Prepend text</button>
+	<button id="b4">Prepend list items</button>
+	<br><br>
+	<button id="b7">Body append multiple value</button>
+	<button id="b8">Body prepend multiple value</button>
+	<br><br>
+	<span id="s1">Test span!</span><br>
+	<button id="b9">Insert before</button>
+	<button id="b10">Insert after</button>
+	<button id="b11">Insert multiple text before</button>
+	<button id="b12">Insert multiple text after</button>
+
+	<h2>Remove:</h2>
+	<div id="d1" style="height:100px;width:300px;border:1px solid black;background-color:yellow;">
+
+		This is some text in the div.
+		<p>This is a paragraph in the div.</p>
+		<p>This is another paragraph in the div.</p>
+
+	</div>
+	<button id="b13">Remove div element</button>
+	<button id="b14">Empty div element</button>
+	<p class="nice">I have a class name nice.</p>
+	<p class="first">I have a class name first.</p>
+	<p>I don't have a class name.</p>
+	<button id="b15">Remove all p elements with class name nice.</button>
+	<button id="b16">Remove all p elements with class name first.</button>
+	<button id="b17">Remove all p elements.</button>
+</body>
+
+</html>

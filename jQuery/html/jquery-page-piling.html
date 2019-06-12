@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>jQuery Page Piling plugin</title>
+	<link rel="stylesheet" type="text/css" href="../jquery.pagepiling.css">
+	<script src="../jquery-3.3.1.js"></script>
+	<script src="../jquery.pagepiling.js"></script>
+	<script src="../jquery-ui.js"></script>
+	<script src="../scripts/jquery-page-piling.js"></script>
+
+	<style>
+		.section {
+      text-align:center;
+    }
+    .nice {
+    	position: fixed;
+    	list-style-type: none;
+    	z-index: 14;
+    	padding-left: 0;
+    	background-color: transparent;
+    }
+    .nice li {
+    	display: inline-block;
+    	margin-left: 16px;
+    }
+    .nice a {
+    	display: block;
+    	text-decoration: none;
+    	font-size: 22px;
+    	color: black;
+    	background-color: rgba(255, 255, 255, 0.5);
+    	padding: 10px 14px;
+    	border-radius: 8px;
+    }
+    .section h1 {
+    	font-size: 50px;
+    }
+	</style>
+
+</head>
+
+<body>
+	<div id="pagepiling">
+		<ul id="menu" class="nice">
+			<li data-menuanchor="page1" class = "active">
+        <a href="#page1">Page 1</a>
+      </li>
+      <li data-menuanchor="page2">
+        <a href="#page2">Page 2</a>
+      </li>
+      <li data-menuanchor ="page3">
+        <a href="#page3">Page 3</a>
+      </li>
+      <li data-menuanchor="page4">
+        <a href="#page4">Page 4</a>
+      </li>
+		</ul>
+		<div class="section">
+			<h1>jQuery</h1>
+		</div>
+		<div class="section">
+			<h1>jQuery</h1>
+		</div>
+		<div class="section">
+			<h1>jQuery</h1>
+		</div>
+		<div class="section">
+			<h1>jQuery</h1>
+		</div>
+	</div>
+
+</body>
+
+</html>

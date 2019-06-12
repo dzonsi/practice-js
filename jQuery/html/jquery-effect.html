@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>jQuery effect</title>
+	<script src="../jquery-3.3.1.js"></script>
+	<script src="../scripts/jquery-effect.js"></script>
+	<script src="../jquery-ui.js"></script>
+
+	<style>
+		.first {
+			background-color: lightyellow;
+		}
+		.inbl {
+			width: 80px;
+			height: 80px;
+			margin: 10px;
+		}
+		.green {
+			background-color: green;
+		}
+		.blue {
+			background-color: dodgerblue;
+		}
+		.red {
+			background-color: red;
+		}
+		.article {
+			border: 1px solid grey;
+			border-radius: 6px;
+			overflow: auto;
+			font-family: "Comic Sans MS";
+			font-size: 20px;
+		}
+		.img {
+			width: 30%;
+			height: auto;
+			display: block;
+			float: left;
+			margin-right: 15px;
+		}
+		.relative {
+			position: relative;
+		}
+		.div4 {
+			position: relative;
+			height: 100px;
+			width: 200px;
+			background: #98bf21;
+			margin-top: 10px;
+		}
+		.div5 {
+			position: relative;
+			width: 100px;
+			height: 100px;
+			background: tomato;
+			margin-top: 10px;
+		}
+	</style>
+
+</head>
+
+<body>
+	<h2>Hide and show:</h1>
+	<button id="btn1">Hide(slow)</button>
+	<button id="btn2">Show(fast)</button>
+	<button id="btn3">Toggle(2000ms)</button>
+	<button id="btn24">Hide with blind</button>
+	<button id="btn25">Show with blind</button>
+	<button id="btn26">Hide with explode</button>
+	<button id="btn27">Show with explode</button>
+	<div class="first">
+		<h1>jQuery</h1>
+		<p>Hide, show and toggle.</p>
+		<p>Click on buttons to hide and show.</p>
+	</div>
+
+	<h2>Fading:</h2>
+	<button id="btn4">Fade in(slow)</button>
+	<button id="btn5">Fade out(fast)</button>
+	<button id="btn6">Fade toggle(2000ms)</button>
+	<button id="btn7">Fade to(opacity 0.7)</button>
+	<button id="btn8">Fade to(opacity 0.25)</button>
+	<div id="div1" class="inbl green"></div>
+	<div id="div2" class="inbl blue"></div>
+	<div id="div3" class="inbl red"></div>
+
+	<h2>Sliding:</h2>
+	<button id="btn9">slideDown(slow)</button>
+	<button id="btn10">slideUp(fast)</button>
+	<button id="btn11">slideToggle(1500ms)</button>
+	<div class="article">
+		<img class="img" src="../../../images/cars1.jpg" alt="car">
+		<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</span>
+	</div>
+
+	<h2>Animate:</h2>
+	<button id="btn12">Animate</button>
+	<button id="btn13">Animate multiple properties</button>
+	<button id="btn14">Animate height toggle</button>
+	<button id="btn28">Pulsite</button>
+	<div id="anm1" class="inbl blue relative"></div>
+	<button id="btn15">Animate Queue(multiple animate())</button>
+	<button id="btn22">Stop animation</button>
+	<span>Number of animation is:<span id="span1"></span></span>
+	<div id="anm2" class="inbl blue relative"></div>
+	<button id="btn16">Animate Queue(multiple animate())</button>
+	<div id="anm3" class="inbl blue relative">Hello</div>
+
+	<h2>Stop:</h2>
+	<button id="btn17">Start</button>
+	<button id="btn18">Stop</button>
+	<button id="btn19">Stop all(true)</button>
+	<button id="btn20">Stop but finish first(true, true)</button>
+	<div id="anm4" class="div4">HELLO</div>
+
+	<h2>Chaining:</h2>
+	<p id="p1">jQuery is easy for learning!</p>
+	<button id="btn21">Try chaining</button>
+
+	<h2>Queue:</h2>
+	<button id="btn23">Start</button>
+	<p>The queue length is:<span id="span2"></span></p>
+	<div id="anm5" class="div5"></div>
+</body>
+
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>jQuery basic</title>
+	<script src="../jquery-3.3.1.js"></script>
+	<script src="../scripts/jquery-basic.js"></script>
+
+	<style>
+		.btn {
+			border: 0;
+			outline: 0;
+			font-size: 16px;
+			padding: 12px 16px;
+			cursor: pointer;
+		}
+		.btn:hover {
+			background-color: lightyellow;
+		}
+		.first {
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
+		.img {
+			width: 200px;
+			height: 133px;
+			border: 2px solid transparent;
+			box-sizing: border-box;
+		}
+		.second {
+			position: absolute;
+			top: 50px;
+			right: 0;
+		}
+		.third {
+			position: absolute;
+			top: 100px;
+			right: 0;
+		}
+		.fourth {
+			position: absolute;
+			top: 150px;
+			right: 0;
+		}
+		.tbl {
+			border-collapse: collapse;
+			width: 50%;
+		}
+		.tbl th, td {
+			padding: 10px;
+			text-align: left;
+			border-bottom: 1px solid #ddd;
+		}
+		.fifth {
+			position: absolute;
+			top: 200px;
+			right: 0;
+		}
+		.form {
+			position: absolute;
+			top: 250px;
+			right: 0;
+		}
+		.form input {
+			display: block;
+			font-size: 20px;
+			padding: 10px 14px;
+		}
+		.form input[type=button] {
+			border: none;
+			color: white;
+			background-color: red;
+			cursor: pointer;
+		}
+		.form input[type=button]:hover {
+			color: black;
+		}
+	</style>
+
+</head>
+
+<body>
+	<button id="hide">Click to hide all span elements.</button>
+	<span>Span element.</span>
+	<div><button id="hide1">Click to hide element with id "special".</button><div>
+	<p id="special">I have ID "special"</p>
+	<span>I'am span to.</span>
+	<button id="hide2">Click to change color of all elements with class one.</button>
+	<p class="one">Some randome text. My class is one.</p>
+	<p class="one">Some randome text. My class is one.</p>
+	<button id="hide3" class="first btn">Change color of all elements to red.</button>
+	<img id="img" class="img" title="Click to hide!" src="../../../images/cars2.jpg" alt="car">
+	<ul>
+		<li>First.</li>
+		<li>Second.</li>
+		<li>Third.</li>
+		<li>Fourth.</li>
+	</ul>
+	<button id="hide4" class="second btn">Change ul li:nth-child(3).</button>
+	<a href="https://www.google.com/" target="_blank">Google</a>
+	<a href="https://www.google.com/">Google</a>
+	<button id="hide5" class="third btn">Change all elements that have href attribute.</button>
+	<button id="hide6" class="fourth btn">Change all elements that have target=blank attribute.</button>
+	<table class="tbl">
+		<tr>
+			<th>Header 1</th>
+			<th>Header 2</th>
+			<th>Header 3</th>
+		</tr>
+		<tr>
+			<td>Data 1</td>
+			<td>Data 2</td>
+			<td>Data 3</td>
+		</tr>
+		<tr>
+			<td>Data 4</td>
+			<td>Data 5</td>
+			<td>Data 6</td>
+		</tr>
+		<tr>
+			<td>Data 7</td>
+			<td>Data 8</td>
+			<td>Data 9</td>
+		</tr>
+		<tr>
+			<td>Data 10</td>
+			<td>Data 11</td>
+			<td>Data 12</td>
+		</tr>
+	</table>
+	<button id="hide7" class="fifth btn">Style table.</button>
+	<p>On duble-click add border to first image:</p>
+	<img class="img" id="img2" src="../../../images/cars2.jpg" alt="car">
+	<img class="img" id="img3" src="../../../images/cars1.jpg" alt="car">
+	<img class="img" id="img4" src="../../../images/cars3.jpg" alt="car">
+	<div class="form">
+		<form method="POST">
+			<input id="inp1" type="text" name="username" placeholder="Username">
+			<input id="inp2" type="text" name="password" placeholder="Password">
+			<input type="button" value="Submit">
+		</form>
+	</div>
+	<h1>On method accepts multiple events!</h1>
+</body>
+
+</html>

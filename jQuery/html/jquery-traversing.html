@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>jQuery traversing</title>
+	<script src="../jquery-3.3.1.js"></script>
+	<script src="../scripts/jquery-traversing.js"></script>
+
+	<style>
+		.ancestors * {
+  			display: block;
+ 			border: 2px solid grey;
+  			color: grey;
+  			padding: 5px;
+  			margin: 15px;
+			}
+	</style>
+
+</head>
+
+<body class="ancestors">body (great-great-grandparent)
+	<h2>Parent():</h2>
+	<div>div (great-grandparent)
+		<div id="d1">div (grandparent)
+			<li>(direct parent)
+				<span id="s1">span</span>
+			</li>
+		</div>
+	</div>
+
+	<h2>Parents():</h2>
+	<div>div (great-grandparent)
+		<div>div (grandparent)
+			<li>(direct parent)
+				<span id="s2">span</span>
+			</li>
+		</div>
+	</div>
+
+	<h2>Parents(sa parametrom div):</h2>
+	<div>div (great-grandparent)
+		<div>div (grandparent)
+			<li>(direct parent)
+				<span id="s3">span</span>
+			</li>
+		</div>
+	</div>
+
+	<h2>children():</h2>
+	<div id="d2">div (current element)
+		<p>p (child)
+			<span>span (grandchild)</span>
+		</p>
+		<p>p (child)
+			<span>span (grandchild)</span>
+		</p>
+	</div>
+
+	<h2>children(sa parametrom h3 i span):</h2>
+
+	<div id="d3">div (current element)
+		<p>p (child)
+			<span>span (grandchild)</span>
+		</p>
+		<h3>h3 (child)</h3>
+		<p>p (child)
+			<span>span (grandchild)</span>
+		</p>
+		<h3>h3 (child)</h3>
+		<span>span (child)</span>
+	</div>
+
+	<h2>find(sa parametrom *):</h2>
+
+	<div id="d4">div (current element)
+		<p>p (child)
+			<span>span (grandchild)</span>
+		</p>
+		<h3>h3 (child)</h3>
+		<p>p (child)
+			<span>span (grandchild)</span>
+		</p>
+		<h3>h3 (child)</h3>
+		<span>span (child)</span>
+	</div>
+
+	<h2>find(sa parametrom span):</h2>
+
+	<div id="d5">div (current element)
+		<div>div(child)
+			<li>li (grandchild)
+				<h4>h4 (grand-grandchild)
+					<span>span (grand-grand-grandchild)</span>
+				</h4>
+			</li>
+		</div>
+		<p>p (child)
+			<span>span (grandchild)</span>
+		</p>
+		<h3>h3 (child)</h3>
+		<p>p (child)
+			<span>span (grandchild)</span>
+		</p>
+		<h3>h3 (child)</h3>
+		<span>span (child)</span>
+	</div>
+
+	<h2>Siblings</h2>
+
+	<div>div (parent)
+	  <p>p</p>
+	  <span>span</span>
+	  <h2 id="h1">h2</h2>
+	  <h3>h3</h3>
+	  <p>p</p>
+	</div>
+
+	<h2>Siblings(sa parametrom p):</h2>
+
+	<div>div (parent)
+	  <p>p</p>
+	  <span>span</span>
+	  <h2 id="h2">h2</h2>
+	  <h3>h3</h3>
+	  <p>p</p>
+	</div>
+
+	<h2>next() and nextAll():</h2>
+
+	<div>div (parent)
+	  <p>p</p>
+	  <span id="s4">span</span>
+	  <h2 id="h3">h2</h2>
+	  <h3>h3</h3>
+	  <p>p</p>
+	</div>
+
+	<h2>nextUntil(sa parametrom h6):</h2>
+
+	<div>div (parent)
+	  <p>p</p>
+	  <span>span</span>
+	  <h2 id="h4">h2</h2>
+	  <h3>h3</h3>
+	  <h4>h4</h4>
+	  <h5>h5</h5>
+	  <h6>h6</h6>
+	  <p>p</p>
+	</div>
+
+	<h2>prev():</h2>
+
+	<div>div (parent)
+	  <p>p</p>
+	  <span id="s5">span</span>
+	  <h2>h2</h2>
+	  <h3 >h3</h3>
+	  <p>p</p>
+	</div>
+
+	<h2>prevAll():</h2>
+
+	<div>div (parent)
+	  <p>p</p>
+	  <span>span</span>
+	  <h2>h2</h2>
+	  <h3 id="h5">h3</h3>
+	  <p>p</p>
+	</div>
+
+	<h2>pervUntil(sa parametrom h3):</h2>
+
+	<div>div (parent)
+	  <p>p</p>
+	  <span>span</span>
+	  <h2>h2</h2>
+	  <h3>h3</h3>
+	  <h4>h4</h4>
+	  <h5 id="h6">h5</h5>
+	  <h6>h6</h6>
+	  <p>p</p>
+	</div>
+
+	<h2>first(sa parametrom .nice) and last(sa parametrom .nice) and eq(6):</h2>
+
+	<div class="nice">text text text text text text</div>
+	<div class="nice">text text text text text text</div>
+	<div class="nice">text text text text text text</div>
+	<div class="nice">text text text text text text</div>
+	<div class="nice">text text text text text text</div>
+	<div class="nice">text text text text text text</div>
+	<div class="nice">text text text text text text</div>
+	<div class="nice">text text text text text text</div>
+	<div class="nice">text text text text text text</div>
+
+	<h2>filter(sa parametrom .container):</h2>
+
+	<div>text text text text text text</div>
+	<div>text text text text text text</div>
+	<div class="container">text text text text text text</div>
+	<div class="container">text text text text text text</div>
+	<div>text text text text text text</div>
+	<div class="container">text text text text text text</div>
+	<div class="wraper">text text text text text text</div>
+	<div class="container">text text text text text text</div>
+
+	<h2>not(sa parametrom h4):</h2>
+
+	<div class="main">text text text text text text</div>
+	<div class="main">text text text text text text</div>
+	<h4 class="main">text text text text text text</h4>
+	<div class="main">text text text text text text</div>
+	<h4 class="main">text text text text text text</h4>
+	<div class="main">text text text text text text</div>
+	<h4 class="main">text text text text text text</h4>
+	<h4 class="main">text text text text text text</h4>
+	<h4 class="main">text text text text text text</h4>
+
+</body>
+
+</html>

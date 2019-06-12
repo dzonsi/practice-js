@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Javascript MVC</title>
+	<script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+
+	<style>
+
+
+	</style>
+
+</head>
+
+<body>
+	<div class="js-container">
+		<input type="text" class="js-task-textbox">
+		<input type="button" class="ja-add-task-button" value="Add Task">
+
+		<div class="js-tasks-container"></div>
+		<!-- end tasks -->
+		<input type="button" class="js-complete-task-button" value="Complete Tasks">
+		<input type="button" class="js-complete-task-button" value="Delete Tasks">
+
+	</div>
+	<!-- end js-container -->
+
+	<script type="text/javascript" src="EventDispatcher.js"></script>
+	<script type="text/javascript" src="TaskModel.js"></script>
+	<script type="text/javascript" src="TaskView.js"></script>
+	<script type="text/javascript" src="TaskController.js"></script>
+	<script type="text/javascript" src="App.js"></script>
+</body>
+
+</html>
