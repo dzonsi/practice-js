@@ -37,25 +37,23 @@ function createMedia(comment) {
 }
 
 function loadComments() {
-	var xhttp = new XMLHttpRequest();
-	xhttp.onreadystatechange = function() {
-		if(this.readyState = 4 && this.status === 200) {
-			var comments = JSON.parse(this.response);
+	fetch('https://jsonplaceholder.typicode.com/comments', { method: 'GET'})
+		.then(function(response) {
+			return response.json();
+		})
+		.then(function(myJson) {
 			var i;
 			for (i = 0; i < 50; i++) {
-				createMedia(comments[i]);
+				createMedia(myJson[i]);
 			}
-		}
-	}
-	xhttp.onerror = function() {
-		console.log('An error occurred during the comment transfer');
-		var h4 = document.createElement('h4');
-		h4.className = 'w-100 text-center text-white bg-danger p-2 border border-danger rounded';
-		h4.innerHTML = 'An error occurred, try to reload your browser!';
-		row.appendChild(h4);
-	}
-	xhttp.open('GET', 'https://jsonplaceholder.typicode.com/comments', true);
-	xhttp.send();
+		})
+		.catch(error => {
+			console.log(error);
+			var h4 = document.createElement('h4');
+			h4.className = 'w-100 text-center text-white bg-danger p-2 border border-danger rounded';
+			h4.innerHTML = 'An error occurred, try to reload your browser!';
+			row.appendChild(h4);
+		});
 }
 
 loadComments();
