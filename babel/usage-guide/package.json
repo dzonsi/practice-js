@@ -1,0 +1,30 @@
+{
+  "name": "usage-guide",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "babel": "npx babel index.js --out-file index.babel.min.js --plugins=@babel/plugin-transform-arrow-functions --minified",
+    "preset": "npx babel index.js --out-file index.babel.preset.js --presets=@babel/preset-env",
+    "preset-min": "npx babel index.js --out-file index.babel.preset.min.js --presets=@babel/preset-env --minified",
+    "transform": "npx babel trueFalse.js --out-file trueFalseOut.js --plugins transform-minify-booleans",
+    "arrow": "npx babel arrow.js --out-file arrow.babel.js --plugins=@babel/plugin-transform-arrow-functions",
+    "console": "npx babel console.js -o console.babel.js --plugins transform-remove-console",
+    "first": "npx babel -f console.js -o console.babel.first.js --plugins"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-transform-arrow-functions": "^7.2.0",
+    "@babel/plugin-transform-react-jsx": "^7.3.0",
+    "@babel/preset-env": "^7.4.5",
+    "babel-plugin-minify-booleans": "^1.0.2",
+    "babel-plugin-transform-minify-booleans": "^6.9.4",
+    "babel-plugin-transform-remove-console": "^6.9.4"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.4.4"
+  }
+}

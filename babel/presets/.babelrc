@@ -1,0 +1,20 @@
+{
+  "presets": [
+  	[
+  		"@babel/preset-react",
+  		{
+  			"pragmaFrag": "DomFrag",
+  			"throwIfNamespace": false
+  		}
+  	],
+  	[
+  		"@babel/preset-env"
+  	],
+  	[
+  		"minify",
+      {
+        "removeConsole": true// uklucen plugin koji uklanja konzolu
+      }
+  	]
+  ]
+}
