@@ -41,15 +41,20 @@ function loadComments() {
 		.then(function(response) {
 			return response.json();
 		})
-		.then(function(myJson) {
+		.then(function(json) {
 			var i;
+			const errorDiv = document.getElementById('error-div');
+			if(errorDiv) {
+				errorDiv.style.display = 'none';
+			}
 			for (i = 0; i < 50; i++) {
-				createMedia(myJson[i]);
+				createMedia(json[i]);
 			}
 		})
 		.catch(error => {
 			console.log(error);
 			var h4 = document.createElement('h4');
+			h4.id = 'error-div';
 			h4.className = 'w-100 text-center text-white bg-danger p-2 border border-danger rounded';
 			h4.innerHTML = 'An error occurred, try to reload your browser!';
 			row.appendChild(h4);

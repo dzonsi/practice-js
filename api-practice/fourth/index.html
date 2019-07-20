@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Practice API with Bootstrap 4</title>
+
+    <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <link href="style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- loading div -->
+    <div id="loading" class="loading border border-dark rounded shadow d-flex flex-column justify-content-center align-items-center">
+      <div class="spinner-border text-success" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+      <p class="text-dark font-weight-bold">Loading users...</p>
+    </div>
+
+    <!-- error div -->
+    <div id="error" class="error error-remove border border-dark rounded shadow d-flex flex-column justify-content-center align-items-center">
+      <p class="text-success text-center font-weight-bold mb-0">Loading users failed... Please reload your browser.</p>
+    </div>
+
+    <div class="container-fluid">
+      <div class="jumbotron bg-dark mb-0 jumbotron-relative">
+        <h2 class="text-success d-inline-block">Users from jsonplaceholder</h2>
+        <img class="img-fluid float-right jumbotron-image rounded-circle d-none d-sm-block" src="img_avatar.png" alt="avatar image">
+      </div>
+
+      <div class="row p-2">
+        <button id="prev" class="col-6 btn btn-outline-success">Preview user</button>
+        <button id="next" class="col-6 btn btn-outline-success">Next user</button>
+      </div>
+
+      <div class="row">
+
+        <div class="col-12 col-xl-6 p-2">
+          <div class="media border rounded p-3 h-100 shadow-sm">
+            <img class="img mr-3" src="img_avatar.png" alt="avatar image">
+            <div class="media-body">
+
+              <h2><span class="text-success">Name: </span><span id="name">Name</span></h2>
+              <h4><span class="text-success">Username: </span><span id="username">Username</span></h4>
+              <h4><span class="text-success">Email: </span><span id="email">Email</span></h4>
+
+              <div><!-- address collapse start-->
+                <p>
+                  <button class="btn btn-sm btn-success text-dark font-weight-bold" type="button" data-toggle="collapse"                data-target="#address" aria-expanded="false" aria-controls="              collapseExample">
+                    Address
+                  </button>
+                </p>
+                <div class="collapse" id="address">
+                  <div class="card card-body">
+                    <h4><span class="text-success">Street: </span><span id="street">Street</span></h4>
+                    <h4><span class="text-success">Suite: </span><span id="suite">Suite</span></h4>
+                    <h4><span class="text-success">City: </span><span id="city">City</span></h4>
+                    <h4><span class="text-success">Zip code: </span><span id="zipcode">Zip code</span></h4>
+
+                    <div><!-- geo collapse start-->
+                      <p>
+                        <button class="btn btn-sm btn-success text-dark   font-weight-bold" type="button" data-toggle="collapse"                  data-target="#geo" aria-expanded="false"  aria-controls="              collapseExample">
+                      Geo...
+                        </button>
+                      </p>
+                      <div class="collapse" id="geo">
+                        <div class="card card-body">
+                          <h4><span class="text-success">Lat: </span><span id="lat">Lat</span></h4>
+                          <h4><span class="text-success">Lng: </span><span id="lng">Lng</span></h4>
+                        </div>
+                      </div>
+
+                    </div><!-- geo collapse end -->
+
+                  </div>
+                </div>
+
+              </div><!-- address collapse end -->
+
+              <h4><span class="text-success">Phone: </span><span id="phone">Phone</span></h4>
+              <h4><span class="text-success">Website: </span><span id="website">Website</span></h4>
+
+              <div><!-- company collapse start-->
+                <p>
+                  <button class="btn btn-sm btn-success text-dark font-weight-bold" type="button" data-toggle="collapse"                data-target="#company" aria-expanded="false" aria-controls="              collapseExample">
+                    Company
+                  </button>
+                </p>
+                <div class="collapse" id="company">
+                  <div class="card card-body">
+                    <h4><span class="text-success">Name: </span><span id="companyname">Name</span></h4>
+                    <h4><span class="text-success">CatchPhrase: </span><span id="catchphrase">Cathc Phrase</span></h4>
+                    <h4><span class="text-success">Bs: </span><span id="bs">Bs</span></h4>
+                  </div>
+                </div>
+              </div><!-- company collapse end -->
+
+            </div>
+          </div>
+        </div>
+
+      </div><!-- zatvara row -->
+
+    </div><!-- zatvara container-fluid -->
+
+    <script src="fetch.js"></script>
+  </body>
+</html>

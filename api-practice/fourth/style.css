@@ -1,0 +1,47 @@
+
+.jumbotron-relative {
+	position: relative;
+}
+.jumbotron-image {
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	top: 37.2px;
+	right: 37.2px;
+}
+.img {
+	width: 60px;
+	height: 60px;
+}
+@media screen and (min-width: 700px) {
+	.img {
+		width: 100px;
+		height: 100px;
+	}
+}
+.loading {
+	width: 200px;
+	height: 150px;
+	background-color: white;
+	position: fixed;
+	top: 25%;
+	left: 50%;
+	transform: translate(-50%);
+	z-index: 1000;
+}
+.loading-remove {
+	display: none !important;
+}
+.error {
+	width: 200px;
+	height: 150px;
+	background-color: white;
+	position: fixed;
+	top: 25%;
+	left: 50%;
+	transform: translate(-50%);
+	z-index: 999;
+}
+.error-remove {
+	display: none !important;
+}
