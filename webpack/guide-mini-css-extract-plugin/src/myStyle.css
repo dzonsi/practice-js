@@ -1,0 +1,9 @@
+.nice {
+	color: white;
+	background-color: mediumseagreen;
+	transition: 0.5s all;
+}
+
+.nice:hover {
+	background-color: grey;
+}
