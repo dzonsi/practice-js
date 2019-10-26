@@ -1,0 +1,364 @@
+:root {
+	--main-bg-color: #fff;
+	--main-blue: #3ec4f0;
+	--main-blue-darken: #0e92be;
+	--main-orange: #ff8566;
+	--main-orange-darken: #ff5c33;
+	--main-green: #36fce2;
+	--main-green-darken: #03b099;
+	--main-grey: #cccccc;
+	--main-grey-darken: #808080;
+}
+* {
+	box-sizing: border-box;
+}
+body {
+	margin: 0;
+	background-color: var(--main-bg-color);
+}
+
+.container {
+	max-width: 1000px;
+	height: 50px;
+	margin: 0 auto;
+}
+
+/* main navbar start */
+
+.navbar {
+  overflow: hidden;
+  height: 50px;
+  background-color: var(--main-grey);
+}
+.navbar ul {
+	list-style-type: none;
+	margin: 0;
+	padding-left: 0;
+	height: 50px;
+}
+.navbar li {
+	display: inline-block;
+	overflow: hidden;
+}
+.navbar a {
+  display: block;
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  padding: 15px 16px;
+  height: 50px;
+  font-size: 20px;
+  transition: background-color 0.3s;
+  line-height: 20px;
+  background-color: var(--main-grey);
+}
+.navbar a:hover {
+ 	background-color: var(--main-grey-darken);
+ 	color: var(--main-bg-color);
+}
+
+/* active start */
+
+li.active a {
+  background-color: var(--main-grey-darken);
+  color: var(--main-bg-color);
+}
+/* opciono spustiti na kraj da bi bio najjaci */
+
+/* active end */
+
+/* home start */
+
+.home a {
+  background-color: var(--main-orange);
+  font-size: 24px;
+	line-height: 26px;
+	padding: 13px;
+}
+.home a:hover {
+	background-color: var(--main-orange-darken);
+ 	color: var(--main-bg-color);
+}
+
+/* home end */
+
+
+/* menu icon start */
+
+li.menu-bar {
+	display: none;
+	float: right;
+	height: 50px;
+}
+li.menu-bar:hover {
+	background-color: inherit;
+}
+.menu-bar-icon {
+	cursor: pointer;
+}
+.menu-bar-icon:hover .bar1 {
+	background-color: var(--main-orange);
+}
+.menu-bar-icon:hover .bar2 {
+	background-color: var(--main-orange);
+}
+.menu-bar-icon:hover .bar3 {
+	background-color: var(--main-orange);
+}
+.bar1 {
+	width: 42px;
+	height: 4px;
+	background-color: black;
+	margin: 11px 8px 8px 8px;
+	transition: transform 0.4s, background-color 0.3s;
+}
+.bar2 {
+	width: 36px;
+	height: 4px;
+	background-color: black;
+	margin: 8px;
+	transition: transform 0.4s, background-color 0.3s;
+	transform: translate(6px, 0);
+}
+.bar3 {
+	width: 30px;
+	height: 4px;
+	background-color: black;
+	margin: 8px 8px 11px 8px;
+	transition: transform 0.4s, background-color 0.3s;
+	transform: translate(12px, 0);
+}
+.menu-bar-open .bar1 {
+	-webkit-transform: rotate(-45deg) translate(-10px, 10px) ;
+ 		transform: rotate(-45deg) translate(-8.5px, 8.5px) ;
+}
+.menu-bar-open .bar2 {
+	opacity: 0;
+}
+.menu-bar-open .bar3 {
+	-webkit-transform: rotate(45deg) translate(-10px, -10px) ;
+ 		transform: rotate(45deg) translate(-8.5px, -8.5px) ;
+ 		width: 42px;
+}
+
+/* menu icon end */
+
+/* user-area start */
+
+li.user-area {
+	float: right;
+	display: block;
+	overflow: visible;
+}
+.log-in, a.sign-up {
+	text-align: center;
+  padding: 15px 16px;
+  height: 50px;
+  font-size: 20px;
+  transition: all 0.3s;
+  line-height: 20px;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+}
+
+
+/* login start */
+
+.log-in {
+	background-color: var(--main-green);
+}
+.log-in .fa-sign-in-alt {
+	transition: all 0.3s;
+}
+
+.log-in-popup {
+	position: absolute;
+	top: 0;
+	font-size: 16px;
+	width: 52px;
+	text-align: center;
+	left: 0;
+	margin: 0;
+	color: var(--main-bg-color);
+	background-color: var(--main-grey-darken);
+	opacity: 0;
+	display: block;
+	transition: opacity 0.3s;
+	-moz-user-select: none;
+	user-select: none;
+}
+
+.log-in:hover {
+	background-color: var(--main-green-darken);
+	color: var(--main-bg-color);
+}
+
+.log-in:hover .fa-sign-in-alt {
+	transform: translate(0, 10px);
+}
+
+.log-in:hover .log-in-popup {
+	opacity: 1;
+}
+/* login end */
+
+/* sing in popup start */
+
+a.sign-up  {
+	background-color: var(--main-blue);
+}
+
+a.sign-up .fa-user-plus {
+	transition: all 0.3s;
+}
+
+.sign-up-popup {
+	position: absolute;
+	top: 0;
+	font-size: 16px;
+	width: 57px;
+	text-align: center;
+	left: 0;
+	margin: 0;
+	color: var(--main-bg-color);
+	background-color: var(--main-grey-darken);
+	opacity: 0;
+	display: block;
+	transition: opacity 0.3s;
+	-moz-user-select: none;
+	user-select: none;
+}
+
+a.sign-up:hover {
+	background-color: var(--main-blue-darken);
+	color: var(--main-bg-color);
+}
+
+a.sign-up:hover .fa-user-plus {
+	transform: translate(0, 10px);
+}
+
+a.sign-up:hover .sign-up-popup {
+	opacity: 1;
+}
+
+/* sing in popup end */
+
+/* user-area end */
+
+@media screen and (max-width: 800px) {
+  .navbar li:not(.home) {
+    display: none;
+  }
+  .navbar li.menu-bar {
+  	display: block;
+  }
+
+  /* when navbar is open start */
+
+  .navbar.open {
+		height: initial !important;
+		position: relative;
+		overflow: visible;
+	}
+	.navbar.open li {
+		display: block;
+	}
+	.navbar.open li.menu-bar {
+		position: absolute;
+		top: 0;
+		right: 0;
+		background-color: var(--main-grey);
+	}
+	.navbar.open li.home {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	.navbar.open li.user-area {
+  	float: none;
+  }
+  .navbar.open .log-in {
+  	width: 50%;
+  	float: left;
+  }
+	.navbar.open .sign-up {
+  	width: 50%;
+  	float: left;
+  }
+  .navbar.open .log-in:hover .log-in-popup {
+		display: none;
+	}
+	.navbar.open .sign-up:hover .sign-up-popup {
+		display: none;
+	}
+	.navbar.open .log-in-text {
+		display: inline;
+	}
+	.navbar.open .sign-up-text {
+		display: inline;
+	}
+
+	/* when navbar is open end */
+}
+
+/* main navbar end */
+
+
+/* side navbar start */
+
+.side-nav {
+	background-color: var(--main-grey);
+	width: 230px;
+	overflow: hidden;
+	position: fixed;
+	right: -230px;
+	top: 50px;
+	transition: right 0.4s;
+	z-index: 99;
+}
+.side-nav ul {
+	text-decoration: none;
+	padding-left: 0;
+	margin: 0;
+}
+.side-nav a {
+  display: block;
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  padding: 15px 16px;
+  height: 50px;
+  font-size: 20px;
+  transition: background-color 0.3s;
+  line-height: 20px;
+  background-color: var(--main-grey);
+}
+.side-nav a:hover {
+ 	background-color: var(--main-grey-darken);
+ 	color: var(--main-bg-color);
+}
+.side-nav.open {
+	right: 0;
+}
+.side-nav .side-nav-home a {
+	background-color: var(--main-orange);
+}
+.side-nav .side-nav-home a:hover {
+	background-color: var(--main-orange-darken);
+}
+.side-nav .side-nav-log-in a {
+	background-color: var(--main-green);
+}
+.side-nav .side-nav-log-in a:hover {
+	background-color: var(--main-green-darken);
+}
+.side-nav .side-nav-sign-up a {
+	background-color: var(--main-blue);
+}
+.side-nav .side-nav-sign-up a:hover {
+	background-color: var(--main-blue-darken);
+}
+
+/* side navbar end */
