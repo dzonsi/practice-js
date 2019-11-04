@@ -1,5 +1,9 @@
-let data = { price: 5, quantity: 2 }
+let data = {
+	price: 5,
+	quantity: 2
+};
 let target = null;
+let number = null;
 
 class Dep {
 	constructor() {
@@ -42,6 +46,12 @@ watcher(() => {
 	data.total = data.price * data.quantity;
 });
 
+watcher(() => {
+	number = data.price / data.quantity;
+});
+
 console.log(data.total);
+console.log(number);
 data.price = 20;
 console.log(data.total);
+console.log(number);
