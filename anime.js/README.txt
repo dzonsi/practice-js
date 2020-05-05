@@ -1,0 +1,1 @@
+Anime.js library practice page.

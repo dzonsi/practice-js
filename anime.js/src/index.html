@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Anime.js practice</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<section class="section bg-grey">
+		<h1 class="text-white">
+			<span>A</span><span>n</span><span>i</span><span>m</span><span>e</span><span>.</span><span>j</span><span>s</span> library
+		</h1>
+		<h2 class="text-muted">All you need for awesome animations.</h2>
+		<div class="container animation-container">
+			<div class="square-small bg-light-grey"></div>
+			<div class="square bg-red"></div>
+			<div class="triangle bt-red"></div>
+			<div class="square-big bg-black-grey"></div>
+			<div class="square-small circle bg-red"></div>
+			<div class="rectangle bg-black-grey"></div>
+			<div class="square circle bg-black-grey"></div>
+			<div class="triangle-small"></div>
+			<div class="square-big circle bg-light-grey"></div>
+			<div class="rectangle-br bg-black-grey"></div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-6 text-white px-50">
+					<div>
+						<p class="my-10">translateX</p>
+						<div class="all">
+							<div class="all-progress"></div>
+						</div>
+					</div>
+					<div>
+						<p class="my-10">translateY</p>
+						<div class="all">
+							<div class="all-progress"></div>
+						</div>
+					</div>
+				</div>
+				<div class="col-6 divider px-50">
+					<p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					<a class="link" href="#">Learn more</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="section">
+		<h1 class="letters-container">Animate &nbsp;
+			<span class="letters letters-1">HTML</span>
+			<span class="letters letters-2">JS</span>
+			<span class="letters letters-3">CSS</span>
+			<span class="letters letters-4">SVG</span>
+		</h1>
+		<h2 class="text-muted">Lorem ipsum dolor sit amet.</h2>
+		<div id="wrapper" class="wrapper"></div>
+	</section>
+
+	<section class="section bg-grey">
+		<h1 class="text-white">Controls and callbacks</h1>
+		<h2 class="text-muted">Timing is everything.</h2>
+		<div class="container">
+			<div class="dot-container"></div>
+		</div>
+		<div class="container text-muted">
+			<div class="play-control">
+				<button class="play">Play</button>
+				<button class="pause">Pause</button>
+				<button class="restart">Restart</button>
+			</div>
+		</div>
+	</section>
+
+	<section id="last-section" class="section">
+		<h1>Getting started</h1>
+		<h2 class="text-muted">Resources and documentation.</h2>
+		<div class="container">
+			<div class="row">
+				<div class="col-4 d-flex flex-column justify-content-center align-items-center">
+					<div>
+						<svg class="svg-image" xmlns="http://www.w3.org/2000/svg" width="200" height="150">
+  						<g>
+  							<polygon class="svg-stroke-black svg-stroke-4 svg-fill-white" points="0,0 200,0 200,150 0,150 0,0"></polygon>
+  							<line class="svg-stroke-black svg-stroke-2" x1="20" y1="20" x2="150" y2="20" />
+  							<line class="svg-stroke-black svg-stroke-1" x1="20" y1="30" x2="90" y2="30" />
+  							<line class="svg-stroke-black svg-stroke-1" x1="20" y1="40" x2="100" y2="40" />
+  							<line class="svg-stroke-black svg-stroke-2" x1="20" y1="60" x2="160" y2="60" />
+  							<line class="svg-stroke-black svg-stroke-1" x1="20" y1="70" x2="110" y2="70" />
+  							<line class="svg-stroke-black svg-stroke-1" x1="20" y1="80" x2="80" y2="80" />
+								<line class="svg-stroke-black svg-stroke-2" x1="20" y1="100" x2="140" y2="100" />
+  							<line class="svg-stroke-black svg-stroke-1" x1="20" y1="110" x2="120" y2="110" />
+  							<line class="svg-stroke-black svg-stroke-1" x1="20" y1="120" x2="110" y2="120" />
+  						</g>
+						</svg>
+						<a href="#" class="link">Download</a>
+						<ul class="list">
+							<li>Lorem ipsum</li>
+							<li>dolor sit amet</li>
+							<li>consectetur adipisicing</li>
+							<li>elit, sed do eiusmod</li>
+							<li>tempor incididunt</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-4 d-flex flex-column justify-content-center align-items-center">
+					<div>
+						<svg class="svg-image" xmlns="http://www.w3.org/2000/svg" width="200" height="150">
+  						<g>
+  							<polygon class="svg-stroke-black svg-stroke-4 svg-fill-white" points="0,0 200,0 200,150 0,150 0,0"></polygon>
+  							<polygon class="svg-stroke-black svg-stroke-1 svg-fill-white" points="20,20 180,20 180,130 20,130 20,20"></polygon>
+  							<line class="svg-stroke-black svg-stroke-1" x1="100" y1="20" x2="100" y2="130" />
+  							<line class="svg-stroke-black svg-stroke-1" x1="20" y1="55" x2="180" y2="55" />
+  							<line class="svg-stroke-black svg-stroke-1" x1="20" y1="95" x2="180" y2="95" />
+  						</g>
+						</svg>
+						<a href="#" class="link">Documentation</a>
+						<ul class="list">
+							<li>Lorem ipsum</li>
+							<li>dolor sit amet</li>
+							<li>consectetur adipisicing</li>
+							<li>elit, sed do eiusmod</li>
+							<li>tempor incididunt</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-4 d-flex flex-column justify-content-center align-items-center">
+					<div>
+						<svg class="svg-image" xmlns="http://www.w3.org/2000/svg" width="200" height="150">
+  						<g>
+  							<polygon class="svg-stroke-black svg-stroke-4 svg-fill-white" points="0,0 200,0 200,150 0,150 0,0"></polygon>
+  							<circle class="svg-stroke-black svg-stroke-2 svg-fill-white" cx="50" cy="50" r="20" />
+  							<circle class="svg-stroke-black svg-stroke-2 svg-fill-white" cx="90" cy="110" r="20" />
+  							<polyline class="svg-stroke-black svg-stroke-2 svg-fill-white" points="20,80 40,105 100,60 140,120 180,80" />
+  							<polygon class="svg-stroke-black svg-stroke-2 svg-fill-white" points="150,20 180,60 130,60" />
+  						</g>
+						</svg>
+						<a href="#" class="link">Examples</a>
+						<ul class="list">
+							<li>Lorem ipsum</li>
+							<li>dolor sit amet</li>
+							<li>consectetur adipisicing</li>
+							<li>elit, sed do eiusmod</li>
+							<li>tempor incididunt</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<script type="text/javascript" src="anime.min.js"></script>
+	<script type="text/javascript" src="script.js"></script>
+</body>
+</html>

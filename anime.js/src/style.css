@@ -1,0 +1,235 @@
+body {
+  font-family: 'Open Sans';
+}
+.section {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+.section h1 {
+	font-size: 3rem;
+	font-weight: 900;
+}
+.section:first-of-type h1 span {
+	display: inline-block;
+}
+.section h2 {
+	font-size: 2.5rem;
+	font-weight: 900;
+}
+.section:nth-of-type(1) .link:hover {
+	color: #fff;
+}
+.animation-container {
+	padding: 200px;
+	margin: 70px auto;
+	position: relative;
+}
+.animation-container div {
+	position: absolute;
+	left: 45%;
+	top: 40%;
+}
+.px-50 {
+	padding: 0 50px;
+}
+.my-10 {
+	margin: 10px 0;
+}
+.bg-grey {
+	background-color: #222;
+}
+.bg-light-grey {
+	background-color: #ddd;
+}
+.bg-red {
+	background-color: #FF4848;
+}
+.bg-black-grey {
+	background: linear-gradient(to bottom right, #000 20%, #555);
+}
+.square-small {
+	width: 25px;
+	height: 25px;
+}
+.square {
+	width: 50px;
+	height: 50px;
+}
+.square-big {
+	width: 100px;
+	height: 100px;
+}
+.circle {
+	border-radius: 50%;
+}
+.triangle-small {
+	width: 0;
+	height: 0;
+	border-top: 43px solid #ddd;
+	border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+}
+.triangle {
+	width: 0;
+	height: 0;
+	border-top: 87px solid #ddd;
+	border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+}
+.rectangle {
+	width: 120px;
+	height: 50px;
+}
+.rectangle-br {
+	width: 120px;
+	height: 50px;
+	border-radius: 25px;
+}
+.bt-red {
+	border-top-color: #FF4848;
+}
+.divider {
+	position: relative;
+}
+.divider::before {
+	display: block;
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 2px;
+	height: 100%;
+	background-color: #aaa;
+}
+.all {
+	height: 3px;
+	background-color: #aaa;
+	overflow: hidden;
+}
+.all-progress {
+	width: 100%;
+	height: 3px;
+	background-color: #FF4848;
+}
+/* second section */
+.letters-container {
+	position: relative;
+	font-weight: 900;
+	font-size: 3rem;
+	margin-left: -70px;
+}
+.letters {
+	color: #FF4848;
+	opacity: 0;
+	margin: auto;
+	position: absolute;
+	top: 0;
+	left: 100%;
+}
+.wrapper {
+	position: relative;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	width: 1px;
+	height: 70vh;
+}
+.el {
+	position: absolute;
+	opacity: 1;
+	width: 3px;
+	height: 20vh;
+	margin-top: -12vh;
+  transform-origin: 50% 100%;
+  background: #6c757d;
+}
+/* third section */
+.play-control {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.play, .pause, .restart {
+	border: 1px solid #6c757d;
+	border-radius: 5px;
+	outline: none;
+	color: #FF4848;
+	background-color: transparent;
+	font-size: 1.5rem;
+	padding: 0.1rem 1rem;
+	margin-left: 2rem;
+}
+.play {
+	margin-left: 0;
+}
+.dot-container {
+	margin: 100px 0;
+	display: grid;
+	grid-template-columns: auto auto auto auto auto auto auto auto;
+	justify-content: center;
+	align-content: center;
+	grid-gap: 2rem 2rem;
+}
+.dot {
+	width: 2rem;
+	height: 2rem;
+	border-radius: 50%;
+	background: #6c757d;
+}
+/* four section */
+.section:nth-of-type(4) h2 {
+	margin-bottom: 70px;
+}
+.link {
+	font-weight: 700;
+	font-size: 1.5rem;
+	color: #FF4848;
+	margin-bottom: 20px;
+	display: inline-block;
+	transition: color .3s;
+}
+.link:hover {
+	color: #222;
+	text-decoration: none;
+}
+.list {
+	list-style-type: none;
+	padding-left: 0;
+}
+/* css animation of svg, element must have stroke
+.border {
+	stroke-dasharray: 800;
+	stroke-dashoffset: 800;
+	animation: move 5s linear forwards;
+}
+@keyframes move {
+	to {
+		stroke-dashoffset: 0;
+	}
+}
+*/
+.svg-image {
+	display: block;
+	margin-bottom: 40px;
+	visibility: hidden;
+}
+.svg-stroke-black {
+	stroke: #000;
+}
+.svg-stroke-1 {
+	stroke-width: 1;
+}
+.svg-stroke-2 {
+	stroke-width: 2;
+}
+.svg-stroke-4 {
+	stroke-width: 4;
+}
+.svg-fill-white {
+	fill: #fff;
+}
